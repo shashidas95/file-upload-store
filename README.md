@@ -36,7 +36,7 @@
    - php artisan serve
    This will start the server at `http://localhost:8000`.
    
-   ![start  server image](resources/images/hello.png)
+   ![start  server image](resources/images/serve.jpeg)
    
 ## In web.php
 - Route::get('/hello', [helloController::class, 'index']);
@@ -55,7 +55,7 @@
 - git remote add origin https://github.com/shashidas95/myApp.git
 - git push -u origin master
 
-![Hello world](resources/images/serve.jpeg)
+![Hello world](resources/images/hello.png)
 
 
 
