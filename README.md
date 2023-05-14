@@ -79,7 +79,7 @@ php artisan make:controller helloController
 
 10. vendor: The `vendor` folder is not included in the initial project structure. It is created and populated when you install the application's dependencies using Composer. The `vendor` folder contains all the dependencies specified in the `composer.json` file, including Laravel itself and any additional packages or libraries used in the project.
 
-![Artsan Serve image](images/serve.jpeg)
+![Artsan Serve image](resources/images/serve.jpeg)
 ![Hello world](images/hello.png)
 
 -   [Simple, fast routing engine](https://laravel.com/docs/routing).
