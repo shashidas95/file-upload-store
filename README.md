@@ -36,7 +36,7 @@
    - php artisan serve
    This will start the server at `http://localhost:8000`.
    
-   ![start  server image](resources/images/serve.jpeg)
+   ![start  server image](resources/images/hello.png)
    
 ## In web.php
 - Route::get('/hello', [helloController::class, 'index']);
