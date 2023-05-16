@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\helloController;
+use App\Http\Controllers\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,4 +21,6 @@ Route::get('/', function () {
 // Route::get('/hello', function(){
 //     return view('hello');
 // });
-Route::get('/hello', [helloController::class, 'index']);
+Route::get('/hello/{name}/{age}', [DemoController::class, 'index']);
+// Route::get('/hello', [DemoController::class, 'index']);
+
