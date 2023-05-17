@@ -2,7 +2,6 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DemoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +13,10 @@ use App\Http\Controllers\DemoController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::get('/hello/{name}/{age}', [DemoController::class, 'index']);
-
+// Route::Post('/demo/{email}', [DemoController::class, 'DemoAction']);
+Route::Post('/file', [DemoController::class, 'DemoAction']);
+Route::Post('/fileupload', [DemoController::class, 'FileUpload']);
+Route::Post('/filestore', [DemoController::class, 'FileStore']);
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
-

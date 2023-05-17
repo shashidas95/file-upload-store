@@ -18,9 +18,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/hello', function(){
-//     return view('hello');
-// });
-Route::get('/hello/{name}/{age}', [DemoController::class, 'index']);
-// Route::get('/hello', [DemoController::class, 'index']);
+// Route::get('/demo/{name}/{age}', [DemoController::class, 'DemoAction']);
+// Route::Post('/demo/{email}', [DemoController::class, 'DemoAction']);
+Route::Post('/file', [DemoController::class, 'DemoAction']);
+Route::Post('/fileupload', [DemoController::class, 'FileUpload']);
+Route::Post('/filestore', [DemoController::class, 'FileStore']);
 

@@ -6,27 +6,27 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
- public function index(Request $request)
- {
- $name = $request->name;
- $age = $request->age;
+    public function DemoAction(Request $request)
+    {
+       $photo= $request->file(key:'photo');
+       $size = filesize($photo);
+       $type = filetype($photo);
+       $originalName = $photo->getClientOriginalName();
+       $extension = $photo->extension();
 
- $city = $request->header(key:'city');
- $postcode = $request->header(key:'postcode');
- $position = $request->input(key:"position");
- $wing = $request->input(key:"wing");
- $office = $request->input(key:"office");
- return $data = array(
-    'name' => $name,
-    'age' => $age,
-    'city' => $city,
-    'postcode' => $postcode,
-    'position' => $position,
-    'wing' => $wing,
-    'office' => $office
- );
+       return array($size, $type, $originalName,$extension  );
+    }
+    public function FileUpload(Request $request)
+    {
+        $photo = $request->file(key:'photo');
+        $photo->move(public_path('upload'), $photo->getClientOriginalName());
+        return 1;
 
-
-// return $request->input();
- }
+    }
+    public function FileStore(Request $request)
+    {
+        $photo = $request->file(key:'photo');
+        $photo->storeAs('photo', $photo->getClientOriginalName());
+        return 1;
+    }
 }
