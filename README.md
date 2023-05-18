@@ -55,6 +55,13 @@
 - git remote add origin https://github.com/shashidas95/myApp.git
 - git push -u origin master
 
+
+
+
+## after cloning repo from remote to local by command "git clone https://github.com/shashidas95/myApp.git" must have run the command "composer install" for loading the vendor folder 
+
+
+
 ![Hello world](resources/images/hello.png)
 
 
