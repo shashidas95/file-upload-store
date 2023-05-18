@@ -60,6 +60,12 @@
 
 ## after cloning repo from remote to local by command "git clone https://github.com/shashidas95/myApp.git" must have run the command "composer install" for loading the vendor folder 
 
+In your project's root directory, make a copy of the .env.example file and rename it to .env:
+
+copy .env.example .env  # For Windows
+Open the newly created .env file in a text editor.
+
+Save the .env file.
 
 
 ![Hello world](resources/images/hello.png)
