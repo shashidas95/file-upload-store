@@ -15,7 +15,17 @@ use App\Http\Controllers\DemoController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('posts');
+});
+
+Route::get('/posts/{post}', function ($slug) {
+    $path =__DIR__."/../resources/posts/{$slug}.html";
+
+    if (!file_exists($path)) {
+        return redirect('/');
+    }
+    $post = file_get_contents($path);
+    return view('post', ['post'=> $post]);
 });
 
 // Route::get('/demo/{name}/{age}', [DemoController::class, 'DemoAction']);
